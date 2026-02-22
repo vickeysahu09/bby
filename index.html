@@ -161,7 +161,7 @@ iframe {
 
 
 <!-- Replace with your special song -->
-<audio id="loveVideo" preload="auto" loop>
+<audio id="loveVideo" controls preload="auto" loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
 <div class="section" id="photoSection">
@@ -185,23 +185,15 @@ function reveal() {
         document.getElementById("photoSection").style.opacity = "1";
     }, 3500);
 
-    let audio = document.getElementById("loveVideo");
+    const audio = document.getElementById("loveVideo");
 
-    audio.pause();          // reset state
     audio.currentTime = 0;
 
-    audio.play().then(() => {
-        console.log("Playing ❤️");
-    }).catch(err => {
-        console.log("Error:", err);
+    audio.play().catch((e) => {
+        alert("Click again to play music ❤️");
     });
 }
 
-    // 🔊 play song
-    document.addEventListener("click", () => {
-    let audio = document.getElementById("loveVideo");
-    audio.play();
-});
 
 function createHeart() {
     const heart = document.createElement("div");
@@ -222,6 +214,7 @@ setInterval(createHeart, 500);
 
 </body>
 </html>
+
 
 
 
