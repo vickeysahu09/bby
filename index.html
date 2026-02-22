@@ -161,7 +161,7 @@ iframe {
 
 
 <!-- Replace with your special song -->
-<audio controls autoplay loop>
+<audio id="loveVideo" autoplay loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
 <div class="section" id="photoSection">
@@ -186,10 +186,10 @@ function reveal() {
     }, 3500);
 
     // 🔊 play song
+    document.addEventListener("click", () => {
     let audio = document.getElementById("loveVideo");
-    audio.muted = false;
     audio.play();
-}
+});
 
 function createHeart() {
     const heart = document.createElement("div");
@@ -210,5 +210,6 @@ setInterval(createHeart, 500);
 
 </body>
 </html>
+
 
 
