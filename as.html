@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ashika ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #1e1e2f, #3a3a5f);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    margin-top: 80px;
+    color: #ffb6c1;
+    text-shadow: 0 0 20px rgba(255,182,193,0.8);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffb6c1; }
+    to { text-shadow: 0 0 30px #ff69b4; }
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    background: #ff69b4;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+
+button:hover {
+    background: #ff1493;
+}
+
+.section {
+    width: 85%;
+    max-width: 650px;
+    margin: 30px auto;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.code {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.1em;
+}
+
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.image-row {
+    scroll-behavior: smooth;
+}
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;   /* ❗ keeps all in one row */
+    overflow-x: auto;    /* scroll if screen small */
+    padding: 20px;
+}
+
+.love-img {
+    width: 160px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,182,193,0.6);
+    flex-shrink: 0; /* ❗ prevents shrinking */
+    transition: transform 0.3s;
+}
+
+.love-img:hover {
+    transform: scale(1.1);
+}
+.love-img {
+    width: 140px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255,182,193,0.6);
+    transition: transform 0.3s;
+}
+
+.love-img:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    position: absolute;
+    color: #ffb6c1;
+    animation: float 8s linear infinite;
+}
+
+@keyframes float {
+    from { transform: translateY(100vh) scale(1); opacity: 1; }
+    to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+iframe {
+    margin-top: 40px;
+    border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>My Sweetheart ❤️</h1>
+
+<button onclick="reveal()">Open My Heart</button>
+
+<div class="section" id="loveLetter">
+    Babe 🥹,<br><br>
+    Even if distance keeps us apart, my heart feels closest to you.<br>
+    On your sad days, I want you to open this and remember:<br><br>
+    You are deeply loved.<br>
+    You are my peace.<br>
+    You are my favorite person in this world.<br><br>
+    And I am always, always here for you. ❤️
+</div>
+
+<div class="section" id="ashikaCode">
+    <div class="code">
+        <strong>The Meaning of A.S.H.I.K.A</strong><br><br>
+        A – Always on my mind 🥰<br>
+        S – Safe in my heart 😚<br>
+        H – Happiness when I see you 😍<br>
+        I – Important to me ☺️<br>
+        K – Kindest soul I know 🫣<br>
+        A – Always, forever yours ❤️
+    </div>
+</div>
+
+
+<h2 style="margin-top:60px; font-weight:300;">Our Song 🎶</h2>
+
+
+<!-- Replace with your special song -->
+<audio id="loveVideo" width="300" style="border-radius:15px;">
+    <source src="Arijit Singh, Shreya Ghoshal - Samjhawan - Lyric video _ Alia B, Varun D _ Humpty Sharma Ki Dulhania.mp3" type="audio/mp3">
+</audio>
+<div class="section" id="photoSection">
+    <img src="download (3).jpg" class="love-img">
+    <img src="love.jpg" class="love-img">
+    <img src="download (1).jpg" class="love-img">
+    <img src="download (2).jpg" class="love-img">
+</div>
+
+<div class="hearts"></div>
+
+<script>
+function reveal() {
+    document.getElementById("loveLetter").style.opacity = "1";
+
+    setTimeout(() => {
+        document.getElementById("ashikaCode").style.opacity = "1";
+    }, 2000);
+
+    setTimeout(() => {
+        document.getElementById("photoSection").style.opacity = "1";
+    }, 3500);
+
+    // 🔊 play song
+    let audio = document.getElementById("loveVideo");
+    audio.muted = false;
+    audio.play();
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 5 + 5 + "s";
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
